@@ -1,0 +1,49 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+// base
+@import './base/variables', './base/reset', './base/mixins';
+
+// pages
+@import './pages/index', './pages/sign_in', './pages/all_courses', './pages/course';
+
+// components
+@import './components/header', './components/lesson_card', './components/footer';
+
+.main {
+  .header {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 12px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+
+    // @include mobile {
+    //   background: #0f1535;
+    // }
+  }
+
+  .main_header_color {
+    background: $primary_color;
+  }
+
+  .active_color {
+    background: #0f1535;
+  }
+
+  .scrolled_nav {
+    width: 100%;
+    background: $primary_color;
+    transition: 0.5s ease-in-out;
+    // box-shadow: 0 0 15px rgb(219, 219, 219);
+
+    .header_content {
+      padding-right: 0;
+    }
+  }
+}

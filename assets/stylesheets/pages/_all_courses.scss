@@ -1,0 +1,113 @@
+.all_courses_page {
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  @include mobile{
+    padding-bottom: 0;
+  }
+
+  .content {
+    width: 92%;
+    margin: 0 auto;
+
+    p.page_title {
+      font-family: 'Philosopher';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 45px;
+      line-height: 50px;
+      color: $text_color;
+
+      @include mobile {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 45px;
+      }
+
+      span {
+        color: $active_color;
+      }
+    }
+
+    .sort_and_search {
+      margin-top: 30px;
+      @include flexBox(space-between, center);
+
+      @include mobile {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+      }
+
+      .sort {
+        @include mobile {
+          margin-top: 18px;
+        }
+        .sort_btn {
+          cursor: pointer;
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 22px;
+          color: $text_color;
+          background: none;
+          border: none;
+
+          &:last-child {
+            margin-left: 40px;
+          }
+        }
+
+        .active {
+          color: $active_color;
+        }
+      }
+
+      .search {
+        @include mobile {
+          width: 100%;
+        }
+        .input_search {
+          width: 597px;
+          height: 48px;
+          border: 1px solid $secondary_color;
+          border-radius: 20px;
+          background: $primary_color;
+          padding: 12px 23px;
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 22px;
+          color: $text_color;
+          outline: none;
+
+          @include mobile {
+            width: 100%;
+          }
+
+          &::placeholder {
+            color: $secondary_color;
+          }
+        }
+      }
+    }
+
+    .all_lessons {
+      margin-top: 72px;
+      display: grid;
+      grid-template-columns: 382px 382px 382px;
+      grid-column-gap: 30px;
+      grid-row-gap: 40px;
+      justify-content: space-between;
+
+      @include mobile {
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-row-gap: 30px;
+        margin-top: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,164 @@
+.footer_component {
+  width: 100%;
+  background: linear-gradient(180deg, #5a74fa 0%, #8138f9 100%);
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @include mobile {
+    margin-top: 50px;
+  }
+  .content {
+    width: 90%;
+    margin: 0 auto;
+    @include flexBox(space-between, flex-start);
+    padding: 36px 0;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about {
+      @include mobile {
+        text-align: center;
+      }
+      p.logo {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 155.2%;
+        color: $text_color;
+      }
+
+      .info_text {
+        margin-top: 8px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $text_color;
+        width: 340px;
+      }
+
+      .web_site_link {
+        margin-top: 20px;
+        a {
+          font-family: 'Poppins';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          text-decoration: none;
+          color: $text_color;
+        }
+      }
+    }
+
+    .nav_links {
+      @include mobile {
+        text-align: center;
+        margin-top: 25px;
+      }
+      p.title {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 26px;
+        color: $text_color;
+      }
+
+      ul {
+        margin-top: 15px;
+        list-style: none;
+
+        li {
+          a {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 186.3%;
+            text-decoration: none;
+            color: $text_color;
+          }
+        }
+      }
+    }
+
+    .contact_us {
+      @include mobile {
+        text-align: center;
+        margin-top: 25px;
+      }
+      .title {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 26px;
+        color: $text_color;
+      }
+
+      .description {
+        margin-top: 15px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $text_color;
+        width: 243px;
+      }
+
+      .phone_num {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $text_color;
+        margin-top: 12px;
+      }
+    }
+
+    .sosial_media {
+      @include mobile {
+        text-align: center;
+        margin-top: 25px;
+      }
+      p.title {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 26px;
+        color: $text_color;
+      }
+
+      .social_links {
+        margin-top: 28px;
+        @include flexBox(flex-start, flex-start);
+        list-style: none;
+      }
+    }
+  }
+
+  .web_licence {
+    padding: 30px;
+    border-top: 1px solid $text_color;
+
+    p.text {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 190.6%;
+      color: $text_color;
+      text-align: center;
+    }
+  }
+}

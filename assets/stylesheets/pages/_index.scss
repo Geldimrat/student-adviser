@@ -1,0 +1,813 @@
+.landing {
+  border: 1px solid rgb(73, 65, 65);
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+
+  @include mobile{
+    padding: 0; 
+  }
+
+  .home {
+    width: 100%;
+    height: 850px;
+    padding-top: 120px;
+    position: relative;
+
+    .content {
+      width: 92%;
+      height: 100%;
+      margin: 0 auto;
+      position: relative;
+      z-index: 3;
+
+      .sides {
+        @include flexBox(center, center);
+
+        .left {
+          width: 50%;
+
+          @include mobile {
+            width: 100%;
+          }
+
+          p.quote {
+            font-family: 'Philosopher';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 68px;
+            line-height: 76px;
+            color: $text_color;
+
+            @include mobile {
+              font-weight: 400;
+              font-size: 40px;
+              line-height: 45px;
+            }
+
+            span {
+              padding-left: 25px;
+              color: $active_color;
+              font-weight: 700;
+              font-size: 75px;
+              line-height: 84px;
+
+              @include mobile {
+                padding: 0;
+                font-weight: 700;
+                font-size: 42px;
+                line-height: 52px;
+              }
+            }
+          }
+
+          p.info {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: $text_color;
+            text-align: center;
+            width: 520px;
+            margin-left: 25px;
+            margin-top: 30px;
+
+            @include mobile {
+              font-size: 14px;
+              line-height: 19px;
+              width: 95%;
+              margin: 30px auto 0;
+            }
+          }
+
+          .learn_journey_btn {
+            margin-top: 54px;
+            @include flexBox(center, center);
+
+            a {
+              padding: 17px 43px;
+              display: inline-block;
+              background: linear-gradient(180deg, #486bfa 0%, #882ff8 100%);
+              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.22);
+              border-radius: 10px;
+              font-family: 'Inter';
+              font-style: normal;
+              font-weight: 600;
+              font-size: 20px;
+              line-height: 24px;
+              color: $text_color;
+              text-decoration: none;
+
+              @include mobile {
+                padding: 15px 20px;
+                font-size: 15px;
+              }
+            }
+          }
+
+          // .registration {
+          //   @include flexBox(center, center);
+          //   margin-top: 54px;
+          //   margin-right: 50px;
+
+          //   .login_btn {
+          //     transition: 0.4s ease-in-out;
+          //     background: $secondary_color;
+          //     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.22));
+          //     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.22);
+          //     border-radius: 10px;
+          //     border: 3px solid $secondary_color;
+          //     padding: 17px 45px;
+          //     font-family: 'Inter';
+          //     font-style: normal;
+          //     font-weight: 600;
+          //     font-size: 20px;
+          //     line-height: 24px;
+          //     color: $text_color;
+          //     text-decoration: none;
+
+          //     &:not(:first-child) {
+          //       margin-left: 40px;
+          //     }
+
+          //     &:hover {
+          //       background: none;
+          //     }
+          //   }
+          // }
+        }
+
+        .right {
+          width: 50%;
+
+          @include mobile {
+            display: none;
+          }
+
+          .img {
+            width: 530px;
+            height: 515px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 20px;
+            }
+          }
+        }
+      }
+
+      .counter {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 75%;
+        @include flexBox(space-between, center);
+
+        @include mobile {
+          // align-items: flex-start;
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .counter_card {
+          @include flexBox(center, center);
+
+          @include mobile {
+            margin-top: 40px;
+          }
+
+          .icon {
+            width: 94px;
+            height: 94px;
+            background-color: $text_color;
+            @include flexBox(center, center);
+            border-radius: 50%;
+            margin-right: 15px;
+
+            @include mobile {
+              width: 75px;
+              height: 75px;
+            }
+          }
+
+          .info {
+            p.count {
+              font-family: 'Inter';
+              font-style: normal;
+              font-weight: 700;
+              font-size: 40px;
+              line-height: 48px;
+              color: $text_color;
+
+              @include mobile {
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 29px;
+              }
+            }
+
+            p.title {
+              font-family: 'Inter';
+              font-style: normal;
+              font-weight: 500;
+              font-size: 20px;
+              line-height: 24px;
+              color: $text_color;
+
+              @include mobile {
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .social_media {
+      width: 325px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: $liner_gradient;
+      border-radius: 0px 0px 0px 100px;
+
+      @include mobile {
+        display: none;
+      }
+
+      .contact {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        height: 100%;
+        svg {
+          height: 90%;
+        }
+      }
+
+      .linear_circle {
+        position: absolute;
+        bottom: 70px;
+        right: 0;
+
+        animation: animation_move_up 4.5s ease-in-out infinite;
+
+        @include mobile {
+          display: none;
+        }
+      }
+
+      @keyframes animation_move_up {
+        0% {
+          bottom: 70px;
+        }
+        25% {
+          bottom: 90px;
+        }
+        50% {
+          bottom: 70px;
+        }
+        75% {
+          bottom: 90px;
+        }
+        100% {
+          bottom: 70px;
+        }
+      }
+    }
+
+    .circle {
+      position: absolute;
+      top: 65px;
+      left: 0;
+      animation: animation_move 4.5s ease-in-out infinite;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    @keyframes animation_move {
+      0% {
+        top: 65px;
+      }
+      25% {
+        top: 80px;
+      }
+      50% {
+        top: 65px;
+      }
+      75% {
+        top: 80px;
+      }
+      100% {
+        top: 65px;
+      }
+    }
+  }
+
+  .courses {
+    width: 100%;
+    padding-top: 120px;
+
+    .content {
+      width: 92%;
+      margin: 0 auto;
+
+      p.title {
+        font-family: 'Philosopher';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 50px;
+        color: $text_color;
+
+        @include mobile {
+          font-weight: 600;
+          font-size: 40px;
+          line-height: 45px;
+        }
+
+        span {
+          color: $active_color;
+        }
+      }
+
+      .lessons_content {
+        padding: 30px 20px 0;
+        @include mobile {
+          padding: 30px 0;
+        }
+        .sort_and_search {
+          @include flexBox(space-between, center);
+
+          @include mobile {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+          }
+
+          .sort {
+            @include mobile {
+              margin-top: 18px;
+            }
+            .sort_btn {
+              cursor: pointer;
+              font-family: 'Inter';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 22px;
+              color: $text_color;
+              background: none;
+              border: none;
+
+              &:last-child {
+                margin-left: 40px;
+              }
+            }
+
+            .active {
+              color: $active_color;
+            }
+          }
+
+          .search {
+            @include mobile {
+              width: 100%;
+            }
+            .input_search {
+              width: 597px;
+              height: 48px;
+              border: 1px solid $secondary_color;
+              border-radius: 20px;
+              background: $primary_color;
+              padding: 12px 23px;
+              font-family: 'Inter';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 22px;
+              color: $text_color;
+              outline: none;
+
+              @include mobile {
+                width: 100%;
+              }
+
+              &::placeholder {
+                color: $secondary_color;
+              }
+            }
+          }
+        }
+
+        .lessons {
+          margin-top: 72px;
+          display: grid;
+          grid-template-columns: 382px 382px 382px;
+          grid-column-gap: 30px;
+          justify-content: space-between;
+
+          @include mobile {
+            width: 100%;
+            grid-template-columns: 100%;
+            grid-row-gap: 30px;
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+    .all_courses {
+      margin-top: 68px;
+      width: 100%;
+      position: relative;
+
+      @include mobile {
+        margin-top: 10px;
+      }
+
+      .all_courses_content {
+        width: 92%;
+        margin: 0 auto;
+        .desc {
+          width: 520px;
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 25px;
+          line-height: 30px;
+          color: $text_color;
+
+          @include mobile {
+            width: 279px;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 29px;
+            letter-spacing: 0.01em;
+          }
+        }
+
+        .show_all_course_btn {
+          width: 445px;
+          height: 207px;
+          border-radius: 0px 0px 0px 20px;
+          background-color: $text_color;
+          text-decoration: none;
+          @include flexBox(center, center);
+          position: absolute;
+          top: 0;
+          right: 0;
+
+          @include mobile {
+            width: auto;
+            height: auto;
+            background: none;
+            position: static;
+            margin-top: 20px;
+            justify-content: flex-end;
+
+            svg {
+              width: 14px;
+              height: 14px;
+            }
+          }
+
+          span {
+            margin-right: 20px;
+            font-family: 'Philosopher';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 34px;
+            color: $active_color;
+
+            @include mobile {
+              margin-right: 8px;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 22px;
+              letter-spacing: 0.01em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .individual_class {
+    width: 100%;
+    margin-top: 100px;
+    padding-top: 120px;
+
+    @include mobile {
+      margin-top: 30px;
+      padding-top: 0;
+    }
+
+    .content {
+      width: 92%;
+      margin: 0 auto;
+
+      p.title {
+        font-family: 'Philosopher';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 50px;
+        color: $text_color;
+
+        @include mobile {
+          font-weight: 700;
+          font-size: 40px;
+          line-height: 45px;
+          width: 320px;
+        }
+
+        span {
+          color: $active_color;
+        }
+      }
+
+      .contact_sides {
+        width: 100%;
+        height: 745px;
+        background: $liner_gradient;
+        border-radius: 20px;
+        margin-top: 30px;
+        @include flexBox(space-between, flex-start);
+
+        .left {
+          width: 50%;
+          height: 100%;
+
+          @include mobile {
+            display: none;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+          }
+        }
+
+        .right {
+          width: 50%;
+          height: 100%;
+          padding: 0 92px;
+          @include flexBox(flex-start, center);
+
+          @include mobile {
+            width: 100%;
+            padding: 0 20px;
+          }
+
+          .form {
+            width: 100%;
+            .input {
+              width: 100%;
+              @include flexBox(center, flex-start);
+              flex-direction: column;
+
+              &:not(:first-child) {
+                margin-top: 30px;
+              }
+
+              label {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 18px;
+                color: $text_color;
+              }
+
+              input,
+              textarea {
+                width: 100%;
+                padding: 10px;
+                border-radius: 8px;
+                background: none;
+                border: 1px solid $text_color;
+                margin-top: 8px;
+                outline: none;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 18px;
+                color: $text_color;
+              }
+
+              textarea {
+                height: 159px;
+                resize: none;
+              }
+            }
+
+            .send_btn {
+              width: 98%;
+              margin: 32px auto 0;
+              display: block;
+              padding: 20px 0;
+              font-family: 'Inter';
+              font-style: normal;
+              font-weight: 600;
+              font-size: 17px;
+              line-height: 21px;
+              color: #7d40f9;
+              background: #ffffff;
+              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.21);
+              border-radius: 10px;
+              border: none;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .about {
+    width: 100%;
+    padding-top: 120px;
+
+    @include mobile {
+      padding-top: 35px;
+    }
+
+    .content {
+      width: 92%;
+      margin: 0 auto;
+
+      p.title {
+        font-family: 'Philosopher';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 50px;
+        color: $text_color;
+
+        @include mobile {
+          font-weight: 700;
+          font-size: 40px;
+          line-height: 45px;
+        }
+      }
+
+      .about_sides {
+        margin-top: 30px;
+        background: $secondary_color;
+        border-radius: 20px;
+        @include flexBox(space-between, center);
+
+        @include mobile {
+          margin-top: 16px;
+          flex-direction: column;
+        }
+
+        .left {
+          width: 45%;
+          // padding-left: 64px;
+          @include mobile {
+            width: 100%;
+
+            img {
+              width: 100%;
+              border-radius: 20px 20px 0px 0px;
+            }
+          }
+        }
+
+        .right {
+          width: 50%;
+
+          @include mobile {
+            width: 100%;
+            padding: 17px 22px;
+          }
+
+          .main_text {
+            width: 531px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 157.5%;
+            color: $text_color;
+
+            @include mobile {
+              width: auto;
+              font-weight: 500;
+              font-size: 28px;
+              line-height: 157.5%;
+            }
+          }
+
+          .about_us_text {
+            margin-top: 36px;
+            width: 536px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 202.5%;
+            color: $text_color;
+
+            @include mobile {
+              margin-top: 10px;
+              width: auto;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 202.5%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .our_team {
+    width: 100%;
+    margin-top: 120px;
+
+    @include mobile {
+      margin-top: 30px;
+    }
+
+    .content {
+      width: 92%;
+      margin: 0 auto;
+
+      .title {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 180.5%;
+        color: $text_color;
+
+        @include mobile {
+          font-weight: 600;
+          font-size: 25px;
+          line-height: 180.5%;
+        }
+      }
+
+      .hooper {
+        width: 100%;
+        height: 253px;
+        margin-top: 15px;
+        // background-color: red;
+
+        .card_person {
+          border-radius: 20px;
+          width: 295px;
+          height: 100%;
+          background: $secondary_color;
+          @include flexBox(center, center);
+          flex-direction: column;
+
+          .avatar {
+            width: 125px;
+            height: 125px;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          .person_info {
+            margin-top: 5px;
+            text-align: center;
+
+            .name {
+              font-family: 'Poppins';
+              font-style: normal;
+              font-weight: 600;
+              font-size: 19px;
+              line-height: 202.5%;
+              color: $text_color;
+            }
+
+            .job {
+              font-family: 'Poppins';
+              font-style: normal;
+              font-weight: 300;
+              font-size: 16px;
+              line-height: 202.5%;
+              color: $text_color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

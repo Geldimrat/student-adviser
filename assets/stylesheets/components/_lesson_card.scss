@@ -1,0 +1,88 @@
+.lesson_card {
+  width: 382px;
+  background: $secondary_color;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+
+  @include mobile {
+    width: 100%;
+  }
+
+  .img {
+    width: 100%;
+    img {
+      width: 100%;
+      height: 283px;
+      border-radius: 20px 20px 0px 0px;
+
+      @include mobile {
+        height: 260px;
+      }
+    }
+  }
+
+  .info {
+    .top {
+      padding: 17px;
+      text-decoration: none;
+      display: block;
+      .card_title {
+        // width: 354px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 30px;
+        color: $text_color;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+        @include mobile {
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+
+      .lessons_name {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: $text_color;
+        margin-top: 10px;
+
+        @include mobile {
+          font-size: 16px;
+          line-height: 19px;
+        }
+      }
+    }
+
+    .star_levels {
+      padding: 14px 17px;
+      border-top: 1px solid rgba(0, 0, 0, 0.4);
+      @include flexBox(flex-start, center);
+
+      @include mobile {
+        padding: 11px;
+      }
+
+      .star {
+        cursor: pointer;
+
+        @include mobile {
+          width: 19.24px;
+          height: 21px;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
