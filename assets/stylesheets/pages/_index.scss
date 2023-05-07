@@ -4,8 +4,8 @@
   margin: 0 auto;
   padding-bottom: 100px;
 
-  @include mobile{
-    padding: 0; 
+  @include mobile {
+    padding: 0;
   }
 
   .home {
@@ -87,7 +87,7 @@
 
             a {
               padding: 17px 43px;
-              display: inline-block;
+              // display: inline-block;
               background: linear-gradient(180deg, #486bfa 0%, #882ff8 100%);
               box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.22);
               border-radius: 10px;
@@ -98,6 +98,12 @@
               line-height: 24px;
               color: $text_color;
               text-decoration: none;
+              transition: 0.3s ease;
+
+              &:hover {
+                background: linear-gradient(180deg, #882ff8 0%, #486bfa 100%);
+                box-shadow: 0px 0px 6px rgb(73, 67, 67);
+              }
 
               @include mobile {
                 padding: 15px 20px;
@@ -150,6 +156,7 @@
             height: 515px;
 
             img {
+              box-shadow: 2px 2px 4px 1px #aba6a6;
               width: 100%;
               height: 100%;
               border-radius: 20px;
@@ -365,6 +372,12 @@
               color: $text_color;
               background: none;
               border: none;
+              transition: 0.2s ease;
+
+              &:hover {
+                font-size: 22px;
+                text-shadow: 4px 4px 6px $active_color;
+              }
 
               &:last-child {
                 margin-left: 40px;
@@ -373,6 +386,11 @@
 
             .active {
               color: $active_color;
+              transition: 0.2s ease;
+
+              &:hover {
+                color: $text_color;
+              }
             }
           }
 
@@ -381,7 +399,7 @@
               width: 100%;
             }
             .input_search {
-              width: 597px;
+              width: 300px;
               height: 48px;
               border: 1px solid $secondary_color;
               border-radius: 20px;
@@ -394,6 +412,11 @@
               line-height: 22px;
               color: $text_color;
               outline: none;
+              transition: 0.3s ease-in-out;
+
+              &:focus {
+                width: 600px;
+              }
 
               @include mobile {
                 width: 100%;
@@ -453,8 +476,8 @@
         }
 
         .show_all_course_btn {
-          width: 445px;
-          height: 207px;
+          width: 380px;
+          height: 180px;
           border-radius: 0px 0px 0px 20px;
           background-color: $text_color;
           text-decoration: none;
@@ -462,6 +485,13 @@
           position: absolute;
           top: 0;
           right: 0;
+          transition: 0.3s ease;
+
+          &:hover {
+            width: 445px;
+            height: 207px;
+            box-shadow: 2px 2px 4px 2px rgb(75, 73, 73);
+          }
 
           @include mobile {
             width: auto;
@@ -615,11 +645,11 @@
               width: 98%;
               margin: 32px auto 0;
               display: block;
-              padding: 20px 0;
+              padding: 16px 0;
               font-family: 'Inter';
               font-style: normal;
               font-weight: 600;
-              font-size: 17px;
+              font-size: 18px;
               line-height: 21px;
               color: #7d40f9;
               background: #ffffff;
@@ -627,6 +657,13 @@
               border-radius: 10px;
               border: none;
               cursor: pointer;
+              border: 2px solid #ffffff;
+              transition: 0.3s ease-in-out;
+
+              &:hover {
+                background: none;
+                color: $text_color;
+              }
             }
           }
         }
@@ -663,6 +700,7 @@
 
       .about_sides {
         margin-top: 30px;
+        height: 489px;
         background: $secondary_color;
         border-radius: 20px;
         @include flexBox(space-between, center);
@@ -670,11 +708,19 @@
         @include mobile {
           margin-top: 16px;
           flex-direction: column;
+          height: auto;
         }
 
         .left {
           width: 45%;
+          height: 100%;
           // padding-left: 64px;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+
           @include mobile {
             width: 100%;
 
@@ -735,7 +781,7 @@
 
   .our_team {
     width: 100%;
-    margin-top: 120px;
+    margin-top: 70px;
 
     @include mobile {
       margin-top: 30px;
@@ -773,6 +819,7 @@
           background: $secondary_color;
           @include flexBox(center, center);
           flex-direction: column;
+          cursor: pointer;
 
           .avatar {
             width: 125px;
@@ -810,4 +857,3 @@
     }
   }
 }
-

@@ -137,7 +137,6 @@ body {
 
 .landing .home .content .sides .left .learn_journey_btn a {
   padding: 17px 43px;
-  display: inline-block;
   background: -webkit-gradient(linear, left top, left bottom, from(#486bfa), to(#882ff8));
   background: linear-gradient(180deg, #486bfa 0%, #882ff8 100%);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.22);
@@ -150,6 +149,15 @@ body {
   line-height: 24px;
   color: #FFFFFF;
   text-decoration: none;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.landing .home .content .sides .left .learn_journey_btn a:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#882ff8), to(#486bfa));
+  background: linear-gradient(180deg, #882ff8 0%, #486bfa 100%);
+  -webkit-box-shadow: 0px 0px 6px #494343;
+          box-shadow: 0px 0px 6px #494343;
 }
 
 @media screen and (max-width: 600px) {
@@ -175,6 +183,8 @@ body {
 }
 
 .landing .home .content .sides .right .img img {
+  -webkit-box-shadow: 2px 2px 4px 1px #aba6a6;
+          box-shadow: 2px 2px 4px 1px #aba6a6;
   width: 100%;
   height: 100%;
   border-radius: 20px;
@@ -491,6 +501,13 @@ body {
   color: #FFFFFF;
   background: none;
   border: none;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.landing .courses .content .lessons_content .sort_and_search .sort .sort_btn:hover {
+  font-size: 22px;
+  text-shadow: 4px 4px 6px #4A6BFA;
 }
 
 .landing .courses .content .lessons_content .sort_and_search .sort .sort_btn:last-child {
@@ -499,6 +516,12 @@ body {
 
 .landing .courses .content .lessons_content .sort_and_search .sort .active {
   color: #4A6BFA;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.landing .courses .content .lessons_content .sort_and_search .sort .active:hover {
+  color: #FFFFFF;
 }
 
 @media screen and (max-width: 600px) {
@@ -508,7 +531,7 @@ body {
 }
 
 .landing .courses .content .lessons_content .sort_and_search .search .input_search {
-  width: 597px;
+  width: 300px;
   height: 48px;
   border: 1px solid #5876fa;
   border-radius: 20px;
@@ -521,6 +544,12 @@ body {
   line-height: 22px;
   color: #FFFFFF;
   outline: none;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.landing .courses .content .lessons_content .sort_and_search .search .input_search:focus {
+  width: 600px;
 }
 
 @media screen and (max-width: 600px) {
@@ -605,8 +634,8 @@ body {
 }
 
 .landing .courses .all_courses .all_courses_content .show_all_course_btn {
-  width: 445px;
-  height: 207px;
+  width: 380px;
+  height: 180px;
   border-radius: 0px 0px 0px 20px;
   background-color: #FFFFFF;
   text-decoration: none;
@@ -622,6 +651,15 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.landing .courses .all_courses .all_courses_content .show_all_course_btn:hover {
+  width: 445px;
+  height: 207px;
+  -webkit-box-shadow: 2px 2px 4px 2px #4b4949;
+          box-shadow: 2px 2px 4px 2px #4b4949;
 }
 
 @media screen and (max-width: 600px) {
@@ -819,11 +857,11 @@ body {
   width: 98%;
   margin: 32px auto 0;
   display: block;
-  padding: 20px 0;
+  padding: 16px 0;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 21px;
   color: #7d40f9;
   background: #ffffff;
@@ -832,6 +870,14 @@ body {
   border-radius: 10px;
   border: none;
   cursor: pointer;
+  border: 2px solid #ffffff;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.landing .individual_class .content .contact_sides .right .form .send_btn:hover {
+  background: none;
+  color: #FFFFFF;
 }
 
 .landing .about {
@@ -869,6 +915,7 @@ body {
 
 .landing .about .content .about_sides {
   margin-top: 30px;
+  height: 489px;
   background: #5876fa;
   border-radius: 20px;
   display: -webkit-box;
@@ -889,11 +936,18 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: auto;
   }
 }
 
 .landing .about .content .about_sides .left {
   width: 45%;
+  height: 100%;
+}
+
+.landing .about .content .about_sides .left img {
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 600px) {
@@ -959,7 +1013,7 @@ body {
 
 .landing .our_team {
   width: 100%;
-  margin-top: 120px;
+  margin-top: 70px;
 }
 
 @media screen and (max-width: 600px) {
@@ -1014,6 +1068,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  cursor: pointer;
 }
 
 .landing .our_team .content .hooper .card_person .avatar {
@@ -1867,6 +1922,13 @@ body {
   -webkit-box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.lesson_card:hover {
+  -webkit-box-shadow: 0px 3px 4px rgba(231, 226, 226, 0.2);
+          box-shadow: 0px 3px 4px rgba(231, 226, 226, 0.2);
 }
 
 @media screen and (max-width: 600px) {
@@ -2144,10 +2206,37 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   list-style: none;
+}
+
+.footer_component .content .sosial_media .social_links li {
+  width: 35px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer_component .content .sosial_media .social_links li:not(:last-child) {
+  margin-right: 16px;
+}
+
+.footer_component .content .sosial_media .social_links li a {
+  text-decoration: none;
+  display: block;
+}
+
+.footer_component .content .sosial_media .social_links li a img {
+  width: 100%;
 }
 
 .footer_component .web_licence {

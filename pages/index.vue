@@ -1,5 +1,6 @@
 <template>
   <div class="landing">
+
     <section class="home" id="home">
       <div class="content">
         <div class="sides">
@@ -248,7 +249,7 @@
         </p>
         <div class="contact_sides">
           <div class="left">
-            <img src="@/assets/images/individual_class/1.png" alt="" />
+            <img src="@/assets/images/individual_class/6.png" alt="" />
           </div>
           <div class="right">
             <div class="form">
@@ -257,8 +258,8 @@
                 <input type="text" id="name" required autocomplete="off" />
               </div>
               <div class="input">
-                <label for="surname">Surname:</label>
-                <input type="text" id="surname" required autocomplete="off" />
+                <label for="email">Email:</label>
+                <input type="email" id="email" required autocomplete="off" />
               </div>
               <div class="input">
                 <label for="age">Age:</label>
@@ -453,7 +454,7 @@ export default {
     links[0].classList.add('active')
 
     window.onscroll = () => {
-      if (scrollY > 80) {
+      if (scrollY > 20) {
         nav_bar.classList.add('scrolled_nav')
       } else {
         nav_bar.classList.remove('scrolled_nav')

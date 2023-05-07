@@ -141,8 +141,27 @@
 
       .social_links {
         margin-top: 28px;
-        @include flexBox(flex-start, flex-start);
+        @include flexBox(flex-start, center);
         list-style: none;
+
+        li {
+          width: 35px;
+          height: 35px;
+          @include flexBox(center, center);
+
+          &:not(:last-child){
+            margin-right: 16px;
+          }
+
+          a {
+            text-decoration: none;
+            display: block;
+
+            img {
+              width: 100%;
+            }
+          }
+        }
       }
     }
   }
