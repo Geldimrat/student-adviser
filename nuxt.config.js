@@ -1,6 +1,20 @@
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+
+  ssr: true,
+
+  server: {
+    port: 3000, // default: 3000
+    // host: '10.10.19.95', // default: localhost,
+    host: 'localhost', // default: localhost,
+    // https: {
+    //   key: fs.readFileSync(path.resolve(__dirname, 'server.key')),
+    //   cert: fs.readFileSync(path.resolve(__dirname, 'server.crt'))
+    // }
+  },
+
+
   head: {
     titleTemplate: '%s - student_adviser',
     title: 'student_adviser',
@@ -14,7 +28,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/icon.ico' }
     ]
   },
 
@@ -25,6 +39,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~plugins/index.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -39,6 +54,39 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+
+    [
+      'nuxt-i18n',
+      {
+        strategy: 'no_prefix',
+        defaultLocale: 'en',
+        lazy: true,
+        langDir: 'lang/',
+        detectBrowserLanguage: {
+          useCookie: true,
+          cookieKey: 'i18n_redirected',
+          onlyOnRoot: true, // recommended
+        },
+        locales: [
+          {
+            name: 'TM',
+            code: 'tm',
+            file: 'tm.js',
+          },
+          {
+          	name: 'EN',
+          	code: 'en',
+          	file: 'en.js',
+          },
+          // {
+          //   name: 'Русский',
+          //   code: 'ru',
+          //   file: 'ru.js',
+          // },
+        ],
+      },
+    ],
+
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

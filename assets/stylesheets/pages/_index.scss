@@ -420,6 +420,10 @@
 
               @include mobile {
                 width: 100%;
+
+                &:focus {
+                  width: 100%;
+                }
               }
 
               &::placeholder {

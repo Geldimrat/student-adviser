@@ -2,13 +2,15 @@
   <div class="footer_component">
     <div class="content">
       <div class="about">
-        <p class="logo">LOGO</p>
+        <p class="logo">{{ $tt('studentAdviser', 'talypMaslahatçysy') }}</p>
         <p class="info_text">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
+          You can learn any course you want with us from zero to master degree
+          with fun and practical way.
         </p>
         <div class="web_site_link">
-          <a href="https://student-adviser.vercel.app/" target="_blank">student-adviser.vercel.app</a>
+          <a href="https://student-adviser.vercel.app/" target="_blank"
+            >student-adviser.vercel.app</a
+          >
         </div>
       </div>
       <div class="nav_links">
@@ -69,7 +71,7 @@
       </div>
     </div>
     <div class="web_licence">
-      <p class="text">Copyright ® 2022 Student Advisor All rights Rcerved</p>
+      <p class="text">Copyright ® {{new Date().getFullYear()}} Student Advisor. All rights Recerved</p>
     </div>
   </div>
 </template>

@@ -11,10 +11,10 @@
 
   .logo {
     a {
-      font-family: 'Inter';
-      font-style: normal;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
       font-weight: 700;
-      font-size: 40px;
+      font-size: 30px;
       line-height: 54px;
       color: $text_color;
       text-decoration: none;
@@ -45,7 +45,7 @@
     ul {
       list-style: none;
       @include flexBox(center, center);
-      margin-right: 126px;
+      margin-right: 80px;
 
       @include mobile {
         margin: 0;
@@ -75,10 +75,12 @@
           color: $text_color;
           padding: 2px 0;
           display: inline-block;
+          transition: 0.3s ease-in-out;
         }
 
         .active {
           border-bottom: 1px solid $text_color;
+          transition: 0.3s ease-in-out;
 
           @include mobile {
             border-bottom: none;

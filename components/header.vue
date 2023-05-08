@@ -2,28 +2,28 @@
   <div :class="[toggle_btn ? 'active_color' : '', 'header']">
     <div class="header_content">
       <div class="logo">
-        <nuxt-link to="/">LOGO</nuxt-link>
+        <nuxt-link to="/">{{
+          $tt('TalypMaslahatçysy', 'StudentAdviser')
+        }}</nuxt-link>
       </div>
       <nav :class="[{ toggle_menu: toggle_btn }, 'nav_menu']">
         <ul>
-          <li @click="toggle_fn">
-            <nuxt-link class="links" to="/#home">Home</nuxt-link>
-          </li>
-          <li @click="toggle_fn">
-            <nuxt-link class="links" to="/#courses">Courses</nuxt-link>
-          </li>
-          <li @click="toggle_fn">
-            <nuxt-link class="links" to="/#individual_class"
-              >Individual Class</nuxt-link
-            >
-          </li>
-          <li @click="toggle_fn">
-            <nuxt-link class="links" to="/#about">About Us</nuxt-link>
+          <li @click="toggle_fn" v-for="(e, i) in links" :key="i">
+            <nuxt-link class="links" :to="e.href">{{
+              $tt(e.name_tm, e.name_en)
+            }}</nuxt-link>
           </li>
         </ul>
         <div class="lang">
-          <button class="change_btn" @click="toggle_fn">TM</button>
-          <button class="change_btn active_lang" @click="toggle_fn">EN</button>
+          <button
+            v-for="(l, i) in locales"
+            :key="i"
+            class="change_btn"
+            :class="{ active_lang: lang == l.code }"
+            @click="$i18n.setLocale(l.code)"
+          >
+            {{ l.name }}
+          </button>
         </div>
       </nav>
       <div class="humburger_menu">
@@ -78,8 +78,35 @@
 <script>
 export default {
   data() {
+    const links = [
+      {
+        id: 1,
+        name_tm: 'Baş sahypa',
+        name_en: 'Home',
+        href: '/#home',
+      },
+      {
+        id: 2,
+        name_tm: 'Kurslar',
+        name_en: 'Courses',
+        href: '/#courses',
+      },
+      {
+        id: 3,
+        name_tm: 'Şahsy klas',
+        name_en: 'Individual Class',
+        href: '/#individual_class',
+      },
+      {
+        id: 4,
+        name_tm: 'Biz barada',
+        name_en: 'About Us',
+        href: '/#about',
+      },
+    ]
     return {
       toggle_btn: false,
+      links,
       // scrollPosition: null,
     }
   },
@@ -103,6 +130,14 @@ export default {
     // updateScroll() {
     //   this.scrollPosition = window.scrollY
     // },
+  },
+  computed: {
+    lang() {
+      return this.$i18n.locale
+    },
+    locales() {
+      return this.$i18n.locales
+    },
   },
   mounted() {
     // window.addEventListener('scroll', this.updateScroll)
