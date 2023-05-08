@@ -1733,7 +1733,7 @@ body {
 @media screen and (max-width: 600px) {
   .header_content .logo a {
     font-weight: 400;
-    font-size: 32px;
+    font-size: 22px;
   }
 }
 
