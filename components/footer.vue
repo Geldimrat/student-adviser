@@ -2,7 +2,7 @@
   <div class="footer_component">
     <div class="content">
       <div class="about">
-        <p class="logo">{{ $tt('studentAdviser', 'talypMaslahatçysy') }}</p>
+        <p class="logo">{{ $tt('talypMaslahatçysy', 'studentAdviser') }}</p>
         <p class="info_text">
           You can learn any course you want with us from zero to master degree
           with fun and practical way.
@@ -71,7 +71,10 @@
       </div>
     </div>
     <div class="web_licence">
-      <p class="text">Copyright ® {{new Date().getFullYear()}} Student Advisor. All rights Recerved</p>
+      <p class="text">
+        Copyright ® {{ new Date().getFullYear() }} Student Advisor. All rights
+        Recerved
+      </p>
     </div>
   </div>
 </template>
