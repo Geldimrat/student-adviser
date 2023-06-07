@@ -2,7 +2,7 @@
   <div class="footer_component">
     <div class="content">
       <div class="about">
-        <p class="logo">{{ $tt('talypMaslahatçysy', 'studentAdviser') }}</p>
+        <p class="logo">studentAdviser</p>
         <p class="info_text">
           You can learn any course you want with us from zero to master degree
           with fun and practical way.
